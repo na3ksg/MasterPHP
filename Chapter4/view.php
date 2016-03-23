@@ -6,13 +6,11 @@
 </head>
 <body>
    <?php 
-   if(isset($_POST["soccer"])) {
-	   $soccer = implode("と", $_POST["soccer"]);
-	   echo "好きなJリーグチームは";
-	   echo $soccer;
-	   echo "です";
+   if(isset($_POST["gender"]) && ($_POST["gender"] == "男" || $_POST["gender"] == "女")) {
+	   echo "性別：<br>";
+	   echo $_POST["gender"];
    } else {
-   	echo "好きなJリーグチームはありません。";
+	   echo "性別を選んでね！<br>";
    }
    ?>
 </body>
