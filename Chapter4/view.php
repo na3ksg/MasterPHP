@@ -5,12 +5,15 @@
     <title>PHPのテスト</title>
 </head>
 <body>
-   <?php 
-   if($_POST["team"] != "") {
-	   echo 'Jリーグチーム：<br>';
-	   echo $_POST["team"];
+   <?php
+   if(isset($_POST["team"])) {
+	   echo "好きなJリーグチームは以下のとおりです<br><br>";
+	   foreach ($_POST["team"] as $team) {
+		   echo $team;
+		   echo "<br>";
+	   } 
    } else {
-	   "選んでね！<br>";
+	   echo "好きなJリーグチームはありません。";
    }
    ?>
 </body>
