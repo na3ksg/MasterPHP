@@ -5,12 +5,15 @@
     <title>PHPのテスト</title>
 </head>
 <body>
-	<?php
-	echo $_POST["onamae"] . "ちゃん、からのメッセージ！";
-	echo "<br><br>";
-	echo "本文：<br>";
-	echo nl2br($_POST["honbun"]);
-	?>
-    
+   <?php 
+   if(isset($_POST["soccer"])) {
+	   $soccer = implode("と", $_POST["soccer"]);
+	   echo "好きなJリーグチームは";
+	   echo $soccer;
+	   echo "です";
+   } else {
+   	echo "好きなJリーグチームはありません。";
+   }
+   ?>
 </body>
 </html>

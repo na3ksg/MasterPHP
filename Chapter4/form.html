@@ -7,15 +7,16 @@
     </head>
     <body>
 	    <font size="4">テキスト送信のテスト</font>
-	    <form name="form1" method="post" action="confirm.php">
-		    名前：<br>
-		    <input type="text" name="onamae">
-		    <br>
-		    本文：<br>
-		    <textarea name="honbun" cols="30" rows="5"></textarea>
-		    <br>
-		    <input type="submit" value="送信">
-		    <input type="hidden" name="user_id" value="0001">
+	    <form name="form1" method="post" action="view.php">
+		    好きなJリーグチーム：<br>
+		    <input type="checkbox" name="soccer[]" value="浦和レッズ">
+		    浦和レッズ<br>
+		   <input type="checkbox" name="soccer[]" value="鹿島アントラーズ">
+		   鹿島アントラーズ<br>
+		   <input type="checkbox" name="soccer[]" value="ガンバ大阪">
+		   ガンバ大阪<br>
+		   <br>
+		   <input type="submit" value="送信">
 	    </form>
 
 	    
