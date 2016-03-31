@@ -60,7 +60,7 @@ if(isset($_POST['action']) && $_POST['action'] == 'insert'){
  
 // 更新処理
 if(isset($_POST['action']) && $_POST['action'] == 'update'){
-    // セッション変数よりidを受け取ります
+    // セッション変数よりidを受け取る
     $id = $_SESSION['id'];
      
     try {
@@ -88,7 +88,7 @@ if(isset($_POST['action']) && $_POST['action'] == 'update'){
     unset($_SESSION['id']);
 }
  
-// 検索および現在の全データを表示します
+// 検索および現在の全データを表示
 try {
   if(isset($_POST['search_key']) && $_POST['search_key'] != ""){
     $search_key = '%' . $_POST['search_key'] . '%'; 
